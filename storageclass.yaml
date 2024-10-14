@@ -1,0 +1,21 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: ce-aa-std-rwmany
+provisioner: kubernetes.io/azure-file
+parameters:
+  location: koreacentral
+  skuName: Standard_LRS
+  storageAccount: ce82263412file
+reclaimPolicy: Retain
+mountOptions:
+  - dir_mode=0777
+  - file_mode=0777
+  - uid=0
+  - gid=0
+  - mfsymlinks
+  - cache=strict
+  - nosharesock
+  - actimeo=30
+allowVolumeExpansion: true
+volumeBindingMode: Immediate
