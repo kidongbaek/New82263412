@@ -13,6 +13,4 @@ patches:
 - path: ingress.yaml
 images:
 - name: ce82263412acr.azurecr.io/82263412
-  newTag: "202410071108"
-- name: cepgstapacr.azurecr.io/82263412
   newTag: "202410150515"
